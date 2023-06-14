@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Regular.ttf') format('truetype');
+    /* Nếu bạn có các trọng lượng phông chữ khác, hãy thêm các dòng mã tương ứng cho từng tệp tin */
+}
+
+body {
+    background: #1E1E2E;
+}
+
+.centered-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-text {
+    text-align: center;
+    font-size: 26px;
+    /* Kích thước chữ */
+    font-weight: bold;
+    /* In đậm */
+    color: #ffffff;
+    /* Màu trắng */
+}
+
+.form-label {
+    color: #ffffff;
+}
+
+.form-control {
+    width: 400px;
+    /* Đặt chiều rộng tùy ý */
+    background: #2B2B3F;
+}
+
+.form-check-label {
+    color: #ffffff;
+}
+
+.center-button {
+    text-align: center;
+}
+
+.custom-button {
+    padding: 8px 45px;
+    /* Điều chỉnh kích thước nút */
+    font-size: 16px;
+    /* Điều chỉnh kích thước chữ */
+    background: #FF7506;
+}
+
+.custom-button:hover {
+    background: #e76800;
+}
+
+.custom-input {
+    color: #ffffff;
+    /* Màu chữ trắng */
+    background-color: transparent;
+    padding-right: 32px;
+    /* Khoảng cách để chứa biểu tượng mắt */
+}
+
+.custom-input:focus {
+    background-color: #2B2B3F;
+    /* Màu nền đen khi focus */
+    outline: none;
+}
+
+.password-toggle-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #FF7506;
+    /* Màu cam */
+}
+
+.forgot-password {
+    /* position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%); */
+    text-align: center;
+    margin-top: 10%;
+}
+
+.forgot-password a {
+    color: #ffa500;
+    /* Màu cam */
+}
+
+.dropdown-container {
+    position: relative;
+    margin-top: 20px;
+    padding-left: 84%;
+}
+
+.dropdown-menu-right {
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.error-text {
+    text-align: center;
+    font-size: 26px;
+    /* Kích thước chữ */
+    font-weight: bold;
+    /* In đậm */
+    color: #FF4747;
+    /* Màu trắng */
+}
+
+.error-message {
+    display: none;
+    color: #FF4747;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.error-message.show {
+    display: block;
+}
