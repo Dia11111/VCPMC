@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('auth.login');
-})->name('auth.login');
+// Route::get('/', function () {
+//     return view('auth.login');
+// })->name('auth.login');
+
+Route::get('/', [AuthController::class, 'login'])->name('login');
 
 Route::get('/fogot-password', function () {
     return view('auth.forgot');
@@ -33,3 +37,6 @@ Route::get('/error-password', function () {
     return view('auth.error');
 })->name('auth.error');
 
+Route::get('/profile', function () {
+    return view('profile.profile');
+})->name('profile');

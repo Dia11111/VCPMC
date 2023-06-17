@@ -1,41 +1,106 @@
 @extends('layouts.app')
 @section('content')
-<div class="dropdown-container">
-  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"style="
-  padding: 8px 0px;">
-      Tiếng việt
-      <img src="{{ asset('images/language.png') }}" style="width: 12%;">
-  </button>
+<style>
+  .language {
+    position: absolute;
+    top: 24px;
+    right: 40px;
+    z-index: 1;
+}
+
+.language select {
+    background: transparent;
+    border: 1px solid #C8C8DB;
+    border-radius: 4px;
+    color: white;
+    letter-spacing: 0.015em;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px 4px;
+}
+
+.language select:focus {
+    outline: none;
+}
+
+.language select option {
+    background: #1E1E2E;
+    border: 1px solid #C8C8DB;
+    border-radius: 4px;
+    letter-spacing: 0.015em;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px 4px;
+}
+
+.language select option:hover {
+    background: #C8C8DB;
+    color: #1E1E2E;
+}
+</style>
+
+<div class="language">
+  <select name="language" id="language">
+      <option value="vi">
+          Tiếng Việt
+      </option>
+      <option value="en">
+          English 
+      </option>
+      
+  </select>
 </div>
+
 <div class="centered-form">
-  <form>
+  <form method="POST" action="{{ route('login') }}">
+    @csrf
+
     <div class="login-logo">
       <img src="{{ asset('images/logo.png') }}" alt="Logo" width="150">
     </div>
+
     <p class="login-text">Đăng nhập</p>
+
     <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Tên đăng nhập</label>
-      <input type="text" class="form-control custom-input" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <label for="username" class="form-label">Tên đăng nhập</label>
+      <input type="text" class="form-control custom-input" name="username" id="username" aria-describedby="emailHelp" required>
     </div>
+
     <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <label for="password" class="form-label">Password</label>
       <div class="position-relative">
-          <input type="password" class="form-control custom-input " id="exampleInputPassword1">
+          <input type="password" class="form-control custom-input" name="password" id="password">
              <i class="password-toggle-icon fa-regular fa-eye" id="togglePassword" onclick="togglePasswordVisibility()"></i>
       </div>
+
+      @if ($errors->any())
+          <div class="error-message">
+              @foreach ($errors->all() as $error)
+                  <span class="error" style="color: #FF4747;">{{ $error }}</span>
+              @endforeach
+          </div>
+      @endif
+
       <span class="error-message"></span>
     </div>
     
     <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Ghi nhớ đăng nhập</label>
+      <input type="checkbox" class="form-check-input" name="remember" id="remember">
+      <label class="form-check-label" for="remember">Ghi nhớ đăng nhập</label>
     </div>
+
     <div class="center-button">
-      <a type="submit" class="btn btn-primary custom-button">Đăng nhập</a>
+      <button type="submit" class="btn custom-button text-white">Đăng nhập</button>
     </div>
+
     <div class="forgot-password">
       <a href="{{ route('auth.forgot') }}">Quên mật khẩu?</a>
     </div>
+
   </form>
+
 </div>
+
 @endsection

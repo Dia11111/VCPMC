@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Regular.ttf') format('truetype');
+    /* Nếu bạn có các trọng lượng phông chữ khác, hãy thêm các dòng mã tương ứng cho từng tệp tin */
+}
+
+body {
+    background: #1E1E2E;
+}

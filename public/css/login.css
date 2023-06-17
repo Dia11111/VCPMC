@@ -98,18 +98,6 @@ body {
     /* Màu cam */
 }
 
-.dropdown-container {
-    position: relative;
-    margin-top: 20px;
-    padding-left: 84%;
-}
-
-.dropdown-menu-right {
-    position: absolute;
-    top: 100%;
-    left: 0;
-}
-
 .error-text {
     text-align: center;
     font-size: 26px;

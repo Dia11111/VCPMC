@@ -38,13 +38,57 @@
     background-color: #FF7506;
     color: white;
 }
+.language {
+    position: absolute;
+    top: 24px;
+    right: 40px;
+    z-index: 1;
+}
+
+.language select {
+    background: transparent;
+    border: 1px solid #C8C8DB;
+    border-radius: 4px;
+    color: white;
+    letter-spacing: 0.015em;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px 4px;
+}
+
+.language select:focus {
+    outline: none;
+}
+
+.language select option {
+    background: #1E1E2E;
+    border: 1px solid #C8C8DB;
+    border-radius: 4px;
+    letter-spacing: 0.015em;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px 4px;
+}
+
+.language select option:hover {
+    background: #C8C8DB;
+    color: #1E1E2E;
+}
 </style>
-<div class="dropdown-container">
-  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"style="
-  padding: 8px 0px;">
-      Tiếng việt
-      <img src="{{ asset('images/language.png') }}" style="width: 12%;">
-  </button>
+<div class="language">
+  <select name="" id="">
+      <option value="">
+          Tiếng Việt 
+          
+      </option>
+      <option value="">
+          English 
+          
+      </option>
+      
+  </select>
 </div>
 <div class="centered-form">
   <form>
@@ -62,7 +106,7 @@
     </div>
     
     <div class="return">
-      <a href="{{ route('auth.login') }}">Quay lại đăng nhập</a>
+      <a href="{{ route('login') }}">Quay lại đăng nhập</a>
     </div>
   </form>
 </div>
