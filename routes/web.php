@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\RestoreController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,28 +16,21 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('auth.login');
-// })->name('auth.login');
 
 Route::get('/', [AuthController::class, 'login'])->name('login');
 
-Route::get('/fogot-password', function () {
-    return view('auth.forgot');
-})->name('auth.forgot');
+Route::get('/fogot-password', [AuthController::class, 'forgotPassword'])->name('forgotPassword');
 
-Route::get('/reset-password', function () {
-    return view('auth.reset');
-})->name('auth.reset');
+Route::get('/reset-password', [AuthController::class, 'resetPassword'])->name('resetPassword');
 
-Route::get('/cofirm-password', function () {
-    return view('auth.confirm');
-})->name('auth.confirm');
+Route::get('/cofirm-password', [AuthController::class, 'changePassword'])->name('changePassword');
 
 Route::get('/error-password', function () {
     return view('auth.error');
 })->name('auth.error');
 
 Route::get('/profile', function () {
-    return view('profile.profile');
+    return view('pages.profile.profile');
 })->name('profile');
+
+Route::resource('restore', RestoreController::class);

@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Đăng nhập')
 @section('content')
 <style>
   .language {
@@ -96,7 +97,7 @@
     </div>
 
     <div class="forgot-password">
-      <a href="{{ route('auth.forgot') }}">Quên mật khẩu?</a>
+      <a href="{{ route('forgotPassword') }}">Quên mật khẩu?</a>
     </div>
 
   </form>

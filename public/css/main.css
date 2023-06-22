@@ -1,0 +1,245 @@
+/* breadrumcb */
+
+.breadcrumb .breadcrumb-item {
+    color: #f5f5ffb4;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.content-profile-1 {
+    margin-top: -10px;
+    width: 100%;
+    max-width: 1112px;
+    background-color: none;
+    border-radius: 15px;
+    padding: 40px 24px;
+}
+
+
+/* end breadcrumb */
+
+
+/* input search */
+
+.input-search {
+    width: 500px;
+    margin-top: 24px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.input-search input {
+    width: 100%;
+    padding: 12px 24px;
+    border: none;
+    background-color: #2B2B3F;
+    font-size: 16px;
+    color: #fff;
+}
+
+.input-search input:focus {
+    outline: none;
+}
+
+.input-search i {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    padding: 14px 24px;
+    cursor: pointer;
+    background-color: #2B2B3F;
+}
+
+
+/* end input search */
+
+
+/* list search */
+
+.header-search {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 80px);
+    max-width: 1500px;
+}
+
+.search-list {
+    display: flex;
+    margin-top: 24px;
+}
+
+.search-list .form-group {
+    margin-right: 10px;
+}
+
+.search-list .form-group label {
+    margin-right: 10px;
+    color: #fff;
+}
+
+.search-list .form-group select {
+    font-weight: 400;
+    color: #F5F5FF;
+    background: #1E1E2E;
+    /* Orange/4 default */
+    padding: 8px 12px;
+    border: 1px solid #FF7506;
+    border-radius: 8px;
+}
+
+.search-list .form-group select option {
+    border: none;
+    padding: 8px 0;
+}
+
+.choose-option {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 24px;
+    margin: 0px -8px;
+}
+
+.choose-option i {
+    margin-left: 15px;
+    color: #FF7506;
+    padding: 4px;
+    font-size: 20px;
+}
+
+.choose-option a i {
+    color: #AEAEAE;
+}
+
+.action-page {
+    width: 95px;
+    background-color: #2F2F41;
+    border-radius: 16px 0px 0px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    position: absolute;
+    right: 0;
+}
+
+.action-page i {
+    font-size: 30px;
+    color: #FF7506;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: rgba(114, 114, 136, 0.5);
+    margin-bottom: 10px;
+}
+
+.action-page p {
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    color: #FF7506;
+}
+
+.table {
+    width: calc(100% - 80px);
+    margin-top: 14px;
+    max-width: 1500px;
+    background: rgba(47, 47, 65, 0.7);
+    border-radius: 16px;
+    padding: 24px;
+    padding-top: 12px;
+}
+
+.table table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.table table th,
+.table table td {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFAC69;
+    padding: 15px 0;
+    padding-left: 20px;
+}
+
+.table table td {
+    color: white;
+    padding-left: 20px;
+}
+
+.table table tr {
+    border-bottom: 1px solid #72728848;
+}
+
+.table table tr:first-child {
+    border-bottom: 1px solid #72728848;
+}
+
+.table table tr:last-child {
+    border-bottom: none;
+}
+
+.table-action {
+    color: #FF7506 !important;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.table-action a {
+    color: #FF7506;
+}
+
+.footer-table {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-left {
+    color: #F5F5FF;
+    opacity: 0.7;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.footer-left span {
+    color: #F5F5FF;
+    opacity: 1;
+    font-size: 16px;
+    padding: 6px 16px;
+    border: 1px solid #FF7506;
+    border-radius: 4px;
+    margin: 0 5px;
+}
+
+.footer-right ul {
+    display: flex;
+    list-style: none;
+    color: #fff;
+}
+
+.table-checkbox {
+    width: 24px;
+    height: 24px;
+}
+
+.btn {
+    background: #FF5C00;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.002em;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    /* center */
+    cursor: pointer;
+}

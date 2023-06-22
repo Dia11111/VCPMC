@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Confirm Password')
 @section('content')
 <style>
   .language {
@@ -59,14 +60,14 @@
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Mật khẩu mới</label>
     <div class="position-relative">
-        <input type="password" class="form-control custom-input" id="exampleInputPassword1">
+        <input type="password" class="form-control custom-input" name="password" id="password">
            <i class="password-toggle-icon fa-regular fa-eye" id="togglePassword" onclick="togglePasswordVisibility()"></i>
     </div>
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Nhập lại mật khẩu mới</label>
       <div class="position-relative">
-          <input type="password" class="form-control custom-input" id="exampleInputPassword1">
+          <input type="password" class="form-control custom-input" name="password" id="password">
              <i class="password-toggle-icon fa-regular fa-eye" id="togglePassword" onclick="togglePasswordVisibility()"></i>
       </div>
     </div>

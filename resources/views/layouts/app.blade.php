@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>VCPMC</title>
+        <title>VCPMC | @yield('title')</title>
 
         <!-- Fonts -->
         <link rel="shortcut icon" href="{{ asset('images/logo.png') }}" type="image/x-icon">

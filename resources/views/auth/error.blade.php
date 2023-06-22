@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Error Password')
 @section('content')
 <style>
   .return {
