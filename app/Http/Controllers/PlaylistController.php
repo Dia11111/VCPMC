@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class RestoreController extends Controller
+class PlaylistController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class RestoreController extends Controller
      */
     public function index()
     {
-        return view('pages.restore.index');
+        return view('pages.playlist.index');
     }
 
     /**
@@ -23,7 +23,7 @@ class RestoreController extends Controller
      */
     public function create()
     {
-        return view('pages.restore.approve');
+        return view('pages.playlist.create');
     }
 
     /**
@@ -45,7 +45,7 @@ class RestoreController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('pages.playlist.show');
     }
 
     /**
@@ -56,7 +56,12 @@ class RestoreController extends Controller
      */
     public function edit($id)
     {
-        return view('pages.restore.edit');
+        return view('pages.playlist.edit');
+    }
+
+    public function editplaylist($id)
+    {
+        return view('pages.playlist.edit-playlist');
     }
 
     /**

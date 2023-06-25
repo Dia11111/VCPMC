@@ -15,8 +15,8 @@
                 <span>Kho bản ghi</span>
             </li>
         </a>
-        <a href="">
-            <li class="item">
+        <a href="{{ route('playlist.index')}}">
+            <li class="item {{Request::is('playlist') ? 'item-active':''}}">
 
                 <i class="fa-solid fa-sliders"></i>
                 <span>Playlist</span>

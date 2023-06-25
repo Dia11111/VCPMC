@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PlaylistController;
 use App\Http\Controllers\RestoreController;
 
 /*
@@ -33,4 +34,7 @@ Route::get('/profile', function () {
     return view('pages.profile.profile');
 })->name('profile');
 
+Route::get('/play-list/chinh-sua-ban-ghi/{id}', [PlaylistController::class, 'editplaylist'])->name('editplaylist');
+
 Route::resource('restore', RestoreController::class);
+Route::resource('playlist', PlaylistController::class);

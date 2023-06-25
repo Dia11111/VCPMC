@@ -2,7 +2,27 @@
 
 @section('title', 'Kho bản ghi')
 
+@section('script')
+<script>
+    $(document).ready(function() {
+        $('.table-action').eq(1).click(function() {
+            $('.modal-view').css('display', 'flex');
+        });
+        $('.close').click(function() {
+            $('.modal-view').css('display', 'none');
+        });
+        // click without .modal-content to close modal
+        $('.modal-view').click(function(e) {
+            if (!$(e.target).is('.modal-content') && !$(e.target).is('video')) {
+                $('.modal-view').css('display', 'none');
+            }
+        });
+    });
+</script>
+@endsection
+
 @section('content')
+
 <div class="content-profile-1">
     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -92,22 +112,23 @@
                 </tr>
             </thead>
             <tbody>
+                @for ($i = 0; $i < 12; $i++)
                 <tr>
-                    <td>1</td>
-                    <td>Bản ghi 1</td>
+                    <td>{{ $i + 1 }}</td>
+                    <td>Bản ghi {{ $i + 1 }}</td>
                     <td>123456789</td>
                     <td>00:00:00</td>
-                    <td>Ca sĩ 1</td>
-                    <td>Tác giả 1</td>
-                    <td>Thể loại 1</td>
-                    <td>Định dạng 1</td>
+                    <td>Ca sĩ {{ $i + 1 }}</td>
+                    <td>Tác giả {{ $i + 1 }}</td>
+                    <td>Thể loại {{ $i + 1 }}</td>
+                    <td>Định dạng {{ $i + 1 }}</td>
                     <td>01/01/2021</td>
                     <td class="table-action">
-                        <a href="">Cập nhập</a>
+                        <a href="{{ route('restore.edit', $i) }}">Cập nhập</a>
                     </td>
                     <td class="table-action">Nghe</td>
                 </tr>
-
+                @endfor
         </table>
         <div class="footer-table">
             <div class="footer-left">
@@ -134,20 +155,5 @@
         </div>
     </div>
 </div>
-<script>
-    $(document).ready(function() {
-        $('.table-action').eq(1).click(function() {
-            $('.modal-view').css('display', 'flex');
-        });
-        $('.close').click(function() {
-            $('.modal-view').css('display', 'none');
-        });
-        // click without .modal-content to close modal
-        $('.modal-view').click(function(e) {
-            if (!$(e.target).is('.modal-content') && !$(e.target).is('video')) {
-                $('.modal-view').css('display', 'none');
-            }
-        });
-    });
-</script>
+
 @endsection

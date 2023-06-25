@@ -8,6 +8,7 @@
            VCPMC | @yield('title')
         </title>
 
+        <script src="{{ asset('js/script.js') }}"></script>
         <!-- Fonts -->
         <link rel="shortcut icon" href="{{ asset('images/logo.png') }}" type="image/x-icon">
         <!-- Fonts -->
@@ -17,12 +18,15 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <script src="https://kit.fontawesome.com/c71231073e.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
         <link rel="stylesheet" href="{{asset('css/modal.css')}}">
         <link rel="stylesheet" href="{{asset('css/index.css')}}">
         <link rel="stylesheet" href="{{asset('css/main.css')}}">
+        <link rel="stylesheet" href="{{asset('css/playlist.css')}}">
 
     </head>
     <body>
+        
         <div class="container-web">
             @include('components.navbar')
             <div class="content-web">
@@ -35,29 +39,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
-        <script>
-            function active_navbar_mini() {
-                const icon_right_navbar = document.querySelector('.icon-right-navbar');
-                const main_navbar = document.querySelector('.navbar');
-                const navbar_hidden = document.querySelector('.navbar-hidden');
-
-                main_navbar.classList.add('enactive-navbar');
-                navbar_hidden.style.display = 'flex';
-
-
-                document.body.style.width = 'calc(100% - 40px)';
-
-                icon_right_navbar.addEventListener('click', () => {
-                    main_navbar.classList.toggle('active-navbar');
-                });
-
-
-                document.addEventListener('click', (e) => {
-                    if (!main_navbar.contains(e.target) && !icon_right_navbar.contains(e.target)) {
-                        main_navbar.classList.remove('active-navbar');
-                    }
-                });
-            }
-        </script>
+        @yield('script')
     </body>
 </html>

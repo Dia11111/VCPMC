@@ -2,6 +2,49 @@
 
 @section('title', 'Chấp thuận bản ghi')
 
+@section('script')
+<script>
+    $(document).ready(function() {
+        $('.table-action').eq(0).click(function() {
+            $('.modal-view').css('display', 'flex');
+        });
+        $('.close').click(function() {
+            $('.modal-view').css('display', 'none');
+        });
+        // click without .modal-content to close modal
+        $('.modal-view').click(function(e) {
+            if (!$(e.target).is('.modal-content') && !$(e.target).is('video')) {
+                $('.modal-view').css('display', 'none');
+            }
+        });
+        $('.open-modal-active').click(function() {
+            $('.modal-view-action').css('display', 'flex');
+        });
+        $('.close-modal-active').click(function() {
+            $('.modal-view-action').css('display', 'none');
+        });
+    });
+    let checkboxes = document.querySelectorAll('.table-checkbox');
+    let checkboxAll = checkboxes[0];
+    // Bỏ đi checkbox đầu tiên
+    checkboxes = [...checkboxes].slice(1);
+    checkboxAll.addEventListener('change', function() {
+        checkboxes.forEach((item) => {
+            item.checked = this.checked;
+        });
+    });
+    checkboxes.forEach((item) => {
+    item.addEventListener('change', function() {
+    const row = this.closest('tr'); // Lấy phần tử cha gần nhất là hàng tr
+
+    // Tìm checkbox trong hàng hiện tại và thiết lập trạng thái của nó
+    const rowCheckbox = row.querySelector('.table-checkbox');
+    rowCheckbox.checked = this.checked;
+});
+});
+</script>
+@endsection
+
 @section('content')
 <div class="content-profile-1">
     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -101,21 +144,22 @@
                 </tr>
             </thead>
             <tbody>
+                @for ($i = 0; $i < 12; $i++)
                 <tr>
                     <td style="text-align: left">
                         <input type="checkbox" class="table-checkbox">
                     </td>
-                    <td>1</td>
-                    <td>Bản ghi 1</td>
+                    <td>{{ $i + 1 }}</td>
+                    <td>Bản ghi {{ $i + 1 }}</td>
                     <td>00:00:00</td>
-                    <td>Ca sĩ 1</td>
-                    <td>Tác giả 1</td>
+                    <td>Ca sĩ {{ $i + 1 }}</td>
+                    <td>Tác giả {{ $i + 1 }}</td>
                     <td>123456789</td>
-                    <td>Định dạng 1</td>
+                    <td>Định dạng {{ $i + 1 }}</td>
                     <td>01/01/2023</td>
                     <td class="table-action">Nghe</td>
                 </tr>
-
+                @endfor
         </table>
         <div class="footer-table">
             <div class="footer-left">
@@ -158,56 +202,5 @@
         </div>
     </form>
 </div>
-<script>
-    $(document).ready(function() {
-        $('.table-action').eq(0).click(function() {
-            $('.modal-view').css('display', 'flex');
-        });
-        $('.close').click(function() {
-            $('.modal-view').css('display', 'none');
-        });
-        // click without .modal-content to close modal
-        $('.modal-view').click(function(e) {
-            if (!$(e.target).is('.modal-content') && !$(e.target).is('video')) {
-                $('.modal-view').css('display', 'none');
-            }
-        });
-        $('.open-modal-active').click(function() {
-            $('.modal-view-action').css('display', 'flex');
-        });
-        $('.close-modal-active').click(function() {
-            $('.modal-view-action').css('display', 'none');
-        });
-    });
-    let checkboxes = document.querySelectorAll('.table-checkbox');
-    let checkboxAll = checkboxes[0];
-    // Bỏ đi checkbox đầu tiên
-    checkboxes = [...checkboxes].slice(1);
-    checkboxAll.addEventListener('change', function() {
-        checkboxes.forEach((item) => {
-            item.checked = this.checked;
-        });
-    });
-    // checkboxes.forEach((item) => {
-    //     item.addEventListener('change', function() {
-    //         if (!this.checked) {
-    //             checkboxAll.checked = false;
-    //         } else {
-    //             // Kiểm tra xem tất cả các checkbox còn lại đã được checked hay chưa
-    //             const allChecked = [...checkboxes].every((checkbox) => checkbox.checked);
-    //             checkboxAll.checked = allChecked;
-    //         }
-    //     });
-        
-    // });
-    checkboxes.forEach((item) => {
-    item.addEventListener('change', function() {
-    const row = this.closest('tr'); // Lấy phần tử cha gần nhất là hàng tr
 
-    // Tìm checkbox trong hàng hiện tại và thiết lập trạng thái của nó
-    const rowCheckbox = row.querySelector('.table-checkbox');
-    rowCheckbox.checked = this.checked;
-});
-});
-</script>
 @endsection
