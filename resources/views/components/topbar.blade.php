@@ -1,33 +1,23 @@
-<div class="topbar">
-    <div class="btn-select">
+<a>
+    <div class="header">
         <div class="language">
-            <select name="language" id="language">
-                <option value="vi">
-                    Tiếng Việt
+            <select name="" id="">
+                <option value="">
+                    Tiếng Việt 
+                    
                 </option>
-                <option value="en">
+                <option value="">
                     English 
                 </option>
-            
             </select>
         </div>
-
-    </div>
-    <div class="user-profile">
-        <a href="{{ route('profile') }}">
-            <div class="infor-user">
-                <div class="avatar">
-                    <img src="{{ asset('images/avatar.png') }}" alt="avatar">
-                </div>
-                <div class="info-user-name">
-                    <p>
-                        Lê Tấn Tài
-                    </p>
-                    <span>
-                        Admin
-                    </span>
-                </div>
+        <div class="profile-user" href="{{ route('profile') }}">
+            <img src="{{ asset('images/avatar.png') }}" alt="">
+            <div class="profile-username">
+                <span class="name">Lê Tấn Tài</span>
+                <br>
+                <span class="role">Admin</span>
             </div>
-        </a>
+        </div>
     </div>
-</div>
+</a>

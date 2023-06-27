@@ -7,14 +7,12 @@ function active_navbar_mini() {
     navbar_hidden.style.display = 'flex';
 
 
-    // document.body.style.width = 'calc(100% - 40px)';
-    document.querySelector('.content-web').style.width = 'calc(100% - 40px)';
-    document.querySelector('.content-web').style.marginLeft = '40px';
+    document.querySelector('.container-web').style.width = 'calc(100% - 40px)';
+    document.querySelector('.container-web').style.marginLeft = '40px';
 
     icon_right_navbar.addEventListener('click', () => {
         main_navbar.classList.toggle('active-navbar');
     });
-
 
     document.addEventListener('click', (e) => {
         if (!main_navbar.contains(e.target) && !icon_right_navbar.contains(e.target)) {

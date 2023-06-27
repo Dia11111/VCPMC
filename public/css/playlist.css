@@ -97,15 +97,15 @@
     margin-bottom: 20px;
 }
 
-.option__active {
+.option-active {
     color: #FF7506;
 }
 
-.option__active i {
+.option-active i {
     color: #FF7506;
 }
 
-.table_action {
+.table-action {
     text-decoration: none;
 }
 
@@ -138,7 +138,6 @@ input[type="checkbox"] {
 .button-group {
     display: flex;
     justify-content: center;
-    /* margin-top: 24px; */
 }
 
 .button-group button {
@@ -184,9 +183,6 @@ input[type="checkbox"] {
     opacity: 1 !important;
     margin-right: 10px !important;
 }
-
-
-/* tr last add border */
 
 .table-group-ban-ghi tr:last-child td {
     border-bottom: 1px solid #72728848

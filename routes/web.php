@@ -3,8 +3,10 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ContractController;
 use App\Http\Controllers\PlaylistController;
 use App\Http\Controllers\RestoreController;
+use App\Http\Controllers\SheduleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,3 +40,5 @@ Route::get('/play-list/chinh-sua-ban-ghi/{id}', [PlaylistController::class, 'edi
 
 Route::resource('restore', RestoreController::class);
 Route::resource('playlist', PlaylistController::class);
+Route::resource('contract', ContractController::class);
+Route::resource('shedule', SheduleController::class);

@@ -3,7 +3,7 @@
 @section('title', 'Thông tin cá nhân')
 
 @section('content')
-<div class="content-profile">
+{{-- <div class="content-profile">
 
     <div class="preview-avatar">
         <p class="title">
@@ -58,5 +58,5 @@
             </p>
         </button>
     </a>
-</div>
+</div> --}}
 @endsection
