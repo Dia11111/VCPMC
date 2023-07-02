@@ -1,0 +1,68 @@
+.feature-layout {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.feature-item {
+    padding: 12px 16px;
+    margin-top: 16px;
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #2F2F41B2;
+    width: 800px;
+    border-radius: 10px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.feature-item img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/* Table maunal*/
+
+.table-container {
+    display: flex;
+}
+
+.table {
+    width: 325px;
+    height: 500px;
+    overflow: auto;
+}
+
+.table-item {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.selected {
+    color: #FF7506;
+    border-left: 5px solid #FF7506;
+    border-right: 5px solid none;
+}
+
+.detail-table {
+    width: 735px;
+    height: 500px;
+    margin-left: 20px;
+}
+
+#detail {
+    overflow-x: auto;
+}
+
+#table::-webkit-scrollbar {
+    width: 0;
+}

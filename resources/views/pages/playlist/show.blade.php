@@ -2,6 +2,10 @@
 
 @section('title', 'Kho bản ghi')
 
+@section('css')
+<link rel="stylesheet" href="{{asset('css/playlist.css')}}">
+@endsection
+
 @section('script')
 <script>
     active_navbar_mini();

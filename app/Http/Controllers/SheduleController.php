@@ -13,7 +13,7 @@ class SheduleController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages.shedule.index');
     }
 
     /**
@@ -45,7 +45,7 @@ class SheduleController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('pages.shedule.show');
     }
 
     /**

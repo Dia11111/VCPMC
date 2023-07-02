@@ -13,7 +13,7 @@ class ContractController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages.contract.index');
     }
 
     /**
@@ -23,7 +23,12 @@ class ContractController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.contract.create');
+    }
+
+    public function createstore()
+    {
+        return view('pages.contract.create-store');
     }
 
     /**
@@ -43,9 +48,13 @@ class ContractController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request, $id)
     {
-        //
+        $listActive = $request->input('list-active');
+
+        $view = ($listActive == 'true') ? 'pages.contract.show-contract' : 'pages.contract.show';
+
+        return view($view);
     }
 
     /**

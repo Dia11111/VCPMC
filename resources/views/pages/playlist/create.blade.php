@@ -2,6 +2,10 @@
 
 @section('title', 'Kho bản ghi')
 
+@section('css')
+<link rel="stylesheet" href="{{asset('css/playlist.css')}}">
+@endsection
+
 @section('csript')
 <script>
     active_navbar_mini();
@@ -48,7 +52,7 @@
     </div>
 </div>
 <h1>
-    Playlist top ca khúc 2024
+    Thêm Playlist
 </h1>
 
 <div class="modal-view">
@@ -71,36 +75,37 @@
         </a>
     </div>
     <form class="infomation" id="information">
-        <img src="" alt="">
+        <div class="form-group form-group-info">
+            <label for="">
+                Ảnh bìa: <span class="text-danger">*</span>
+            </label>
+            <input id="input-upload" class="input-upload" type="file" name="" required>
+            <button class="btn btn-outline btn-upload" type="button">
+                <i class="fa-solid fa-upload"></i>
+                Tải lên
+            </button>
+        </div>
         <div class="form-group form-group-info">
             <label for="">
                 Tiêu đề:  <span class="text-danger">*</span>
             </label>
-            <input class="input" type="text" name="" required value="Top Ca khúc 2024">
+            <input class="input" type="text" name="" required>
         </div>
         <table>
-            <tr>
-                <th class="title-table">
-                    Người tạo:
-                </th>
-                <th>
-                    Super Admin
-                </th>
-            </tr>
             <tr>
                 <th class="title-table">
                     Tổng số:
                 </th>
                 <th>
-                    8 bản ghi
+                    0 bản ghi
                 </th>
             </tr>
             <tr>
                 <th class="title-table">
-                    Tổng thời lượng:
+                    Tổng thời lượng
                 </th>
                 <th>
-                    01:31:16
+                    00:00:00
                 </th>
             </tr>
         </table>
@@ -108,7 +113,7 @@
             <label for="">
                 Mô tả
             </label>
-            <textarea class="input" name="" id="" cols="30" rows="10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua.</textarea>
+            <textarea class="input" name="" id="" cols="30" rows="10"></textarea>
         </div>
         <div class="form-group form-group-info">
             <label for="">
@@ -149,6 +154,11 @@
                 </tr>
             </thead>
             <tbody>
+                <tr>
+                    <td colspan="6" class="text-center" style="font-size: 16px">
+                        Vui lòng thêm bản ghi để thêm vào PlayList <span class="text-danger">*</span>
+                    </td>
+                </tr>
                 @for ($i = 0; $i < 12; $i++)
                 <tr>
                     <td>

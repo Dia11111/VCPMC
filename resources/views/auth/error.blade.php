@@ -46,50 +46,17 @@
     z-index: 1;
 }
 
-.language select {
-    background: transparent;
-    border: 1px solid #C8C8DB;
-    border-radius: 4px;
-    color: white;
-    letter-spacing: 0.015em;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    padding: 8px 4px;
-}
-
-.language select:focus {
-    outline: none;
-}
-
-.language select option {
-    background: #1E1E2E;
-    border: 1px solid #C8C8DB;
-    border-radius: 4px;
-    letter-spacing: 0.015em;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    padding: 8px 4px;
-}
-
-.language select option:hover {
-    background: #C8C8DB;
-    color: #1E1E2E;
-}
 </style>
 <div class="language">
-  <select name="" id="">
-      <option value="">
-          Tiếng Việt 
-          
-      </option>
-      <option value="">
-          English 
-          
-      </option>
-      
-  </select>
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" style="background: none;" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      Language
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="min-width: 100%;">
+      <li><a class="dropdown-item" href="#">Tiếng Việt</a></li>
+      <li><a class="dropdown-item" href="#">English</a></li>
+    </ul>
+  </div>
 </div>
 <div class="centered-form">
   <form>

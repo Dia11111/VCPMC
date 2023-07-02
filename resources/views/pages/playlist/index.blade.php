@@ -2,6 +2,10 @@
 
 @section('title', 'Playlist')
 
+@section('css')
+<link rel="stylesheet" href="{{asset('css/playlist.css')}}">
+@endsection
+
 @section('content')
 <div class="breadcrumb">
     <div class="breadcrumb-page">
