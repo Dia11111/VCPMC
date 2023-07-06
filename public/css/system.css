@@ -1,0 +1,151 @@
+.button-group {
+    display: flex;
+    justify-content: center;
+}
+
+.button-group button {
+    margin: 20px;
+}
+
+.group-flex {
+    width: 94%;
+    display: flex;
+    margin-top: 24px;
+    align-items: flex-start;
+}
+
+.table-group-ban-ghi {
+    max-width: 886px;
+    width: 50%;
+}
+
+.table-group-ban-ghi tr:last-child td {
+    border-bottom: 1px solid #72728848
+}
+
+.form-check {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-check-content {
+    display: none;
+}
+
+.date-input-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/* dropdown */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.dropdown-button {
+    outline: none;
+    border-radius: 8px;
+    padding: 12px 5px;
+    font-size: 14px;
+    width: 180%;
+    color: #F5F5FF;
+    background: #33334D;
+    border: 1px solid #727288;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #33334D;
+    border: 1px solid #727288;
+    display: none;
+    width: 178%;
+    border-radius: 5px;
+}
+
+.dropdown-menu li {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.editable {
+    cursor: pointer;
+}
+
+
+/* Carousel */
+
+.wrapper .carousel {
+    white-space: nowrap;
+    font-size: 0px;
+    cursor: pointer;
+}
+
+.carousel img {
+    height: 120px;
+    width: calc(100% /3);
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.wrapper {
+    max-width: 1200px;
+    position: relative;
+    margin-right: -50px;
+    margin-left: 15px;
+    margin-top: 90px;
+}
+
+.wrapper i {
+    height: 46px;
+    width: 46px;
+    text-align: center;
+    line-height: 46px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.wrapper i:first-child {
+    left: -35px;
+}
+
+.wrapper i:last-child {
+    right: -55px;
+}
+
+.input {
+    margin-top: 10px;
+    width: 90%;
+}
+
+.text-title {
+    margin-bottom: 20px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: lightgrey;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #FF7506;
+    border-radius: 5px;
+}

@@ -1,0 +1,38 @@
+.sticky-table {
+    overflow-x: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+    background: lightgrey;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 5px;
+}
+
+.group-content {
+    margin-top: 20px;
+    display: flex;
+}
+
+.content-info {
+    width: 31%;
+}
+
+.content-info table tr th {
+    padding: 5px;
+    opacity: 0.7;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left !important;
+}
+
+.text-title {
+    font-weight: 700 !important;
+    opacity: 1 !important;
+    padding-left: 0 !important;
+    display: flex;
+}

@@ -65,7 +65,7 @@
             <input type="text" class="input" id="name" name="name" value="" readonly>
         </div>
         <div class="form-group">
-            <label for="username" class="form-label">Tên đăng nhập</label>
+            <label for="username" class="form-label">Ngày sinh</label>
             <input type="text" class="input" id="username" name="username" value="" readonly>
         </div>
         <div class="form-group">
@@ -73,15 +73,15 @@
             <input type="text" class="input" id="phone" name="phone" value="" readonly>
         </div>
         <div class="form-group">
-            <label for="password" class="form-label">Mật khẩu</label>
-            <input type="password" class="input" id="password" name="password" value="" readonly>
-        </div>
-        <div class="form-group">
             <label for="email" class="form-label">Email</label>
             <input type="email" class="input" id="email" name="email" value="" readonly>
         </div>
         <div class="form-group">
-            <label for="role" class="form-label">Chức vụ</label>
+            <label for="username" class="form-label">Tên đăng nhập</label>
+            <input type="text" class="input" id="username" name="username" value="" readonly>
+        </div>
+        <div class="form-group">
+            <label for="role" class="form-label">Phân quyền</label>
             <input type="text" class="input" id="role" name="role" value="" readonly>
         </div>
 

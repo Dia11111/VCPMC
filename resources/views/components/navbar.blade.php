@@ -78,31 +78,31 @@
                 </li>
             </div>
             <div class="navbar-menu-item-link">
-                <li class="navbar-menu-item ">
+                <li class="navbar-menu-item {{Request::is('installsystem') ? 'active':''}}">
                     <i class="fa-solid fa-gear"></i> @lang('public.Cài đặt')
                     <i class="fa-solid fa-ellipsis-vertical dot-list-item"></i>
                     <ul class="sub-nav">
-                        <a href="" class="navbar-menu-item-link ">
+                        <a href="{{ route('user.index') }}" class="navbar-menu-item-link ">
                             <li class="sub-nav-menu-item">
                                 @lang('public.Phân quyền người dùng') 
                             </li>
                         </a>
-                        <a href="" class="navbar-menu-item-link ">
+                        <a href="{{ route('config') }}" class="navbar-menu-item-link ">
                             <li class="sub-nav-menu-item">
                                 @lang('public.Cấu hình')
                             </li>
                         </a>
-                        <a href="" class="navbar-menu-item-link ">
+                        <a href="{{ route('typecontract.index') }}" class="navbar-menu-item-link ">
                             <li class="sub-nav-menu-item">
                                 @lang('public.Quản lý hợp đồng')
                             </li>
                         </a>
-                        <a href="" class="navbar-menu-item-link ">
+                        <a href="{{ route('workinfo.index') }}" class="navbar-menu-item-link ">
                             <li class="sub-nav-menu-item">
-                                @lang('public.Thông tin sản phẩm')
+                                @lang('public.Thông tin tác phẩm')
                             </li>
                         </a>
-                        <a href="" class="navbar-menu-item-link ">
+                        <a href="{{ route('installsystem') }}" class="navbar-menu-item-link ">
                             <li class="sub-nav-menu-item">
                                 @lang('public.Chu kỳ đối soát')
                             </li>
